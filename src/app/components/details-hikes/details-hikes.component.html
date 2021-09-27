@@ -1,0 +1,26 @@
+<h2>Détail de la randonnée</h2>
+<br>
+<div *ngIf="hike != undefined">
+    <table>
+        <tr>
+            <td>{{ hike.identifiant }}</td>
+            <td>{{ hike.nom }}</td>
+            <td>{{ hike.commune_depart }}</td>
+            <td>{{ hike.code_insee }}</td>
+            <td>{{ hike.depart }}</td>
+            <td>{{ hike.descriptif }}</td>
+            <td>{{ hike.cheminement_aller }}</td>
+            <td>{{ hike.cheminement_retour }}</td>
+            <td>{{ hike.difficulte }}</td>
+            <td>{{ hike.temps_parcours }}</td>
+            <td>{{ hike.longueur }}</td>
+            <td>{{ hike.denivele }}</td>
+            <td>{{ hike.vocation }}</td>
+            <td>{{ hike.observation }}</td>
+            <td>{{ hike.xdepart }}</td>
+            <td>{{ hike.ydepart }}</td>
+            <td>{{ hike.gid }}</td>
+        </tr>
+    </table>
+</div>
+

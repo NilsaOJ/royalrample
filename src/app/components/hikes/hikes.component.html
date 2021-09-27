@@ -7,7 +7,9 @@
 
 <div>
   <ul *ngFor="let hike of hikes">
-    <li > {{hike.nom}} </li>
+    <a href="" [routerLink]="['/details', hikes.indexOf(hike)]"> 
+      <li > {{hike.nom}} </li> 
+    </a>
   </ul>
 </div>
 

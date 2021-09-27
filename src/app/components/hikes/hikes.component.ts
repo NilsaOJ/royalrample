@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hike } from 'src/app/models/hike';
 import {HikesService} from "../../services/hikes.service";
 
 @Component({
@@ -22,6 +23,11 @@ export class HikesComponent implements OnInit {
     this.hikeService.getHikes().subscribe((res) => {
       this.hikes = res.values;
       this.nbreHikes = res.nb_results;
+    });
+  }
+  getIndex(hike: Hike) {
+    this.hikeService.getHikes().subscribe((res) => {
+      this.hikes = res.values.indexOf(hike);
     });
   }
   toggleToMyTodoHikes($event: any) {

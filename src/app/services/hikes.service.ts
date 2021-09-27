@@ -13,4 +13,10 @@ export class HikesService {
     let url = `https://download.data.grandlyon.com/ws/grandlyon/evg_esp_veg.envpdiprboucle/all.json`;
     return this.http.get<HikeAPI>(url);
   }
+
+  getHike(id : String) {
+    let url = `https://download.data.grandlyon.com/ws/grandlyon/evg_esp_veg.envpdiprboucle/all.json`;
+
+    return this.http.get<HikeAPI>(url);
+  }
 }
