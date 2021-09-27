@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, Query } from '@angular/fire/firestore';
+// import { AngularFirestore, AngularFirestoreCollection, Query } from '@angular/fire/firestore';
 import { IFavorite } from '../models/favorites';
 
 @Injectable({
@@ -8,10 +8,12 @@ import { IFavorite } from '../models/favorites';
 export class FavoritesService {
   readonly collectionName = 'favorites';
 
-  constructor(private firestore: AngularFirestore) {
+  constructor(
+    // private firestore: AngularFirestore
+    ) {
   }
 
-  getUserFavoriteList(userId: string, query?: Query): AngularFirestoreCollection<IFavorite> {
-    return this.firestore.collection<IFavorite>(`users/${userId}/${this.collectionName}`, query);
-  }
+  // getHikesFavoriteList(hikesID: string, query?: Query): AngularFirestoreCollection<IFavorite> {
+  //   return this.firestore.collection<IFavorite>(`hikes/${hikesID}/${this.collectionName}`, query);
+  // }
 }

@@ -1,0 +1,36 @@
+<div class="columns">
+  <div class="column is-two-third">
+    <form #form="ngForm">
+      <div class="field has-addons">
+        <div class="control has-icons-left">
+          <input
+            class="input is-small"
+            type="text"
+            name="pokemonRecherche"
+            placeholder="Nom de la randonnée"
+            [(ngModel)]="formSearchHikes.nom"
+            (keyup)="search(formSearchHikes.nom)"
+            pattern="[a-zA-Z 3]*"
+            [class.is-danger]="form.invalid"
+          />
+          <span class="icon is-small is-left">
+
+          </span>
+          <div *ngIf="form.invalid" class="tag is-danger is-light">
+            Le champs de saisie ne doit contenir que des lettres.
+          </div>
+        </div>
+        <a
+          class="button is-primary is-small"
+          (click)="search(formSearchHikes.nom)"
+          [class.is-danger]="form.invalid"
+        >
+          Rechercher
+        </a>
+        <div class="control">
+          <a class="button is-light is-small" (click)="cancelSearch()">Annuler</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,26 +1,23 @@
-<h2>Détail de la randonnée</h2>
-<br>
-<div *ngIf="hike != undefined">
-    <table>
-        <tr>
-            <td>{{ hike.identifiant }}</td>
-            <td>{{ hike.nom }}</td>
-            <td>{{ hike.commune_depart }}</td>
-            <td>{{ hike.code_insee }}</td>
-            <td>{{ hike.depart }}</td>
-            <td>{{ hike.descriptif }}</td>
-            <td>{{ hike.cheminement_aller }}</td>
-            <td>{{ hike.cheminement_retour }}</td>
-            <td>{{ hike.difficulte }}</td>
-            <td>{{ hike.temps_parcours }}</td>
-            <td>{{ hike.longueur }}</td>
-            <td>{{ hike.denivele }}</td>
-            <td>{{ hike.vocation }}</td>
-            <td>{{ hike.observation }}</td>
-            <td>{{ hike.xdepart }}</td>
-            <td>{{ hike.ydepart }}</td>
-            <td>{{ hike.gid }}</td>
-        </tr>
-    </table>
+<div class="container">
+  <div class="title is-3">Détail de la randonnée</div>
+  <br>
+  <ul class="menu-list" *ngIf="hike != undefined">
+      <li>Identifiant : {{ hike.identifiant }}</li>
+      <li>Nom : {{ hike.nom }}</li>
+      <li>Comune de départ : {{ hike.commune_depart }}</li>
+      <li>Code INSEE : {{ hike.code_insee }}</li>
+      <li>Départ : {{ hike.depart }}</li>
+      <li>Descriptif : {{ hike.descriptif }}</li>
+      <li>Cheminement aller : {{ hike.cheminement_aller }}</li>
+      <li>Cheminement retour : {{ hike.cheminement_retour }}</li>
+      <li>Difficulté : {{ hike.difficulte }}</li>
+      <li>Temps de parcours : {{ hike.temps_parcours }}</li>
+      <li>Longueur : {{ hike.longueur }}</li>
+      <li>Denivele : {{ hike.denivele }}</li>
+      <li>Vocation : {{ hike.vocation }}</li>
+      <li>Observation : {{ hike.observation }}</li>
+      <li>Abscisse de départ : {{ hike.xdepart }}</li>
+      <li>Ordonnée de départ : {{ hike.ydepart }}</li>
+      <li>GID : {{ hike.gid }}</li>
+  </ul>
 </div>
-

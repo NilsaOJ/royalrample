@@ -4,13 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HikesComponent } from './components/hikes/hikes.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
+import { getFirestore } from "firebase/firestore";
 import { DetailsHikesComponent } from './components/details-hikes/details-hikes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { HomeComponent } from './components/home/home.component';
     DetailsHikesComponent,
     NavbarComponent,
     HomeComponent,
+    SearchComponent,
+    FavoritesComponent,
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpClientModule,
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     ],

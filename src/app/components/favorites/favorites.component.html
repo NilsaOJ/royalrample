@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="title is-3">Mes randonnées </div>
+
+  <div class="columns is-multiline">
+    <div class="column is-3" *ngFor="let hike of hikes">
+      <div class="card" [routerLink]="['/details-hikes']">
+        <div class="card-content">
+          <div class="image is-4by5">
+<!--            <img [src]="'https://image.tmdb.org/t/p/w370_and_h556_bestv2/' + hike.poster_path" alt="{{ hike.nom }}">-->
+          </div>
+<!--          {{ hike.nom }}-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

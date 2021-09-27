@@ -8,8 +8,6 @@ import {HikesService} from "../../services/hikes.service";
   styleUrls: ['./hikes.component.scss']
 })
 export class HikesComponent implements OnInit {
-  searchTerm: any;
-  errorMessage: any;
   nbreHikes: number | undefined;
   hikes: any;
 

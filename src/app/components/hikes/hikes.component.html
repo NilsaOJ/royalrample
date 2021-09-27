@@ -1,15 +1,15 @@
 <div class="container">
-  <h2>Liste de randonnées: {{nbreHikes}}</h2>
+  <div class="title is-3">Liste de randonnées: {{nbreHikes}}</div>
 
 <div>
-  Filtrer par : <input type="text" placeholder="mots clés ...">
+  <app-search></app-search>
 </div>
-<br>
 
 <div>
   <ul *ngFor="let hike of hikes">
-    <a href="" [routerLink]="['/details', hikes.indexOf(hike)]"> 
-      <li > {{hike.nom}} </li> 
+    <a href="" [routerLink]="['/details', hikes.indexOf(hike)]">
+      <li > {{hike.nom}} </li>
     </a>
   </ul>
+</div>
 </div>
