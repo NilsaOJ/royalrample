@@ -10,7 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
-    HikesComponent
+    HikesComponent,
   ],
     imports: [
         BrowserModule,
