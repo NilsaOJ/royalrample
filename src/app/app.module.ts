@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HikesComponent } from './components/hikes/hikes.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {environment} from "../environments/environment";
+import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import { DetailsHikesComponent } from './components/details-hikes/details-hikes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -23,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     ],
   providers: [],
   bootstrap: [AppComponent]
