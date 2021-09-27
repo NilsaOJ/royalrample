@@ -8,11 +8,13 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
+import { DetailsHikesComponent } from './components/details-hikes/details-hikes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HikesComponent,
+    DetailsHikesComponent,
   ],
     imports: [
         BrowserModule,
