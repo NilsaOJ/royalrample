@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HikesComponent } from './components/hikes/hikes.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {environment} from "../environments/environment";
+import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     ],
   providers: [],
   bootstrap: [AppComponent]

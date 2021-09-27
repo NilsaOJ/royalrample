@@ -1,14 +1,14 @@
-<h2>Liste de randonnées: {{nbreHikes}}</h2>
+<div class="container">
+  <h2>Liste de randonnées: {{nbreHikes}}</h2>
 
-<div>
-  Filtrer par : <input type="text" placeholder="mots clés ...">
+  <div>
+    Filtrer par : <input type="text" placeholder="mots clés ...">
+  </div>
+  <br>
+
+  <div>
+    <ul *ngFor="let hike of hikes">
+      <li > {{hike.nom}} </li>
+    </ul>
+  </div>
 </div>
-<br>
-
-<div>
-  <ul *ngFor="let hike of hikes">
-    <li > {{hike.nom}} </li>
-  </ul>
-</div>
-
-
