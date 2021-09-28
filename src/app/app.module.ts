@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+// import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
   ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
+        // AgmCoreModule.forRoot({
+        //   apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
+        // }),
+          AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,

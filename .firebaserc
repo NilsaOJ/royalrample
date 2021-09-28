@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "royal-ramble"
+  "targets": {
+    "netflix-948c0": {
+      "hosting": {
+        "netflix": [
+          "netflix-948c0"
+        ]
+      }
+    }
   }
 }

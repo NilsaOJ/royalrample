@@ -1,15 +1,15 @@
 <div class="container">
   <div class="title is-3">Liste de randonnées: {{nbreHikes}}</div>
 
-<div>
-  <app-search></app-search>
-</div>
+  <div>
+    <app-search></app-search>
+  </div>
 
-<div>
-  <ul *ngFor="let hike of hikes">
-    <a href="" [routerLink]="['/details', hikes.indexOf(hike)]">
-      <li > {{hike.nom}} </li>
-    </a>
-  </ul>
-</div>
+  <div class="columns is-multiline">
+      <ul class="menu-list column is-one-third" *ngFor="let hike of hikes">
+        <a href="" [routerLink]="['/details', hikes.indexOf(hike)]">
+          <li > {{hike.nom}} </li>
+        </a>
+      </ul>
+    </div>
 </div>
