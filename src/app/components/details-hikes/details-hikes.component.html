@@ -1,23 +1,29 @@
 <div class="container">
   <div class="title is-3">Détail de la randonnée</div>
-  <br>
-  <ul class="menu-list" *ngIf="hike != undefined">
-      <li>Identifiant : {{ hike.identifiant }}</li>
-      <li>Nom : {{ hike.nom }}</li>
-      <li>Comune de départ : {{ hike.commune_depart }}</li>
-      <li>Code INSEE : {{ hike.code_insee }}</li>
-      <li>Départ : {{ hike.depart }}</li>
-      <li>Descriptif : {{ hike.descriptif }}</li>
-      <li>Cheminement aller : {{ hike.cheminement_aller }}</li>
-      <li>Cheminement retour : {{ hike.cheminement_retour }}</li>
-      <li>Difficulté : {{ hike.difficulte }}</li>
-      <li>Temps de parcours : {{ hike.temps_parcours }}</li>
-      <li>Longueur : {{ hike.longueur }}</li>
-      <li>Denivele : {{ hike.denivele }}</li>
-      <li>Vocation : {{ hike.vocation }}</li>
-      <li>Observation : {{ hike.observation }}</li>
-      <li>Abscisse de départ : {{ hike.xdepart }}</li>
-      <li>Ordonnée de départ : {{ hike.ydepart }}</li>
-      <li>GID : {{ hike.gid }}</li>
-  </ul>
+
+  <div class="card">
+    <div class="card-content">
+      <div class="content">
+        <ul class="menu-list" *ngIf="hike != undefined">
+          <li><strong>Identifiant : </strong>{{ hike.identifiant }}</li>
+          <li><strong>Nom : </strong>{{ hike.nom }}</li>
+          <li><strong>Comune de départ : </strong>{{ hike.commune_depart }}</li>
+          <li><strong>Code INSEE : </strong>{{ hike.code_insee }}</li>
+          <li><strong>Départ : </strong>{{ hike.depart }}</li>
+          <li><strong>Descriptif : </strong>{{ hike.descriptif }}</li>
+          <li><strong>Cheminement aller : </strong>{{ hike.cheminement_aller }}</li>
+          <li><strong>Cheminement retour : </strong>{{ hike.cheminement_retour }}</li>
+          <li><strong>Difficulté : </strong>{{ hike.difficulte }}</li>
+          <li><strong>Temps de parcours : </strong>{{ hike.temps_parcours }}</li>
+          <li><strong>Longueur : </strong>{{ hike.longueur }}</li>
+          <li><strong>Denivele : </strong>{{ hike.denivele }}</li>
+          <li><strong>Vocation : </strong>{{ hike.vocation }}</li>
+          <li><strong>Observation : </strong>{{ hike.observation }}</li>
+          <li><strong>Abscisse de départ : </strong>{{ hike.xdepart }}</li>
+          <li><strong>Ordonnée de départ : </strong>{{ hike.ydepart }}</li>
+          <li><strong>GID : </strong>{{ hike.gid }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
